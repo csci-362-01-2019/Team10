@@ -1,3 +1,3 @@
 #!/bin/bash
-ls ../ >> output.html
+ls ../ | sort >> output.html
 open ./output.html
