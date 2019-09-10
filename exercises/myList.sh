@@ -4,10 +4,10 @@
 echo "<!DOCTYPE html>" > output.html
 echo "<html>" >> output.html
 echo "    <head>" >> output.html
-echo "        <title>Current top level listing of directory $PWD</title>" >> output.html
+echo "        <title>Current top level directory listing</title>" >> output.html
 echo "    </head>" >> output.html
 echo "    <body>">> output.html
-for file in *; do
+for file in ~/*; do
     if [ "$file" = "output.html" ];
     then
         continue
