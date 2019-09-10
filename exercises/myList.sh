@@ -21,4 +21,4 @@ for file in ~/*; do
 done
 echo "    </body>" >> output.html
 echo "</html>" >>output.html
-xdg-open output.html
+open output.html
