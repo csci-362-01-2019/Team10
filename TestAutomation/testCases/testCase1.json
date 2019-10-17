@@ -4,5 +4,6 @@
 	"driver_name": "../testCasesExecutables/testFindSprite.py",
 	"method_tested": "find_sprite()",
 	"inputs": [10,100, "yellow", 15,115],
-	"output": "yellow"
+	"output": "yellow",
+	"extra_path":["project/TurtleBlocks/TurtleArt"]
 }

@@ -1,4 +1,3 @@
-import sprites
 import cairo
 import gi
 import os
@@ -9,11 +8,15 @@ from gi.repository import GdkPixbuf
 from gi.repository import Pango
 from gi.repository import PangoCairo
 from gi.repository import GdkPixbuf
-from tasprite_factory import SVG, svg_from_file, svg_str_to_pixbuf
 import sys
+sys.path.insert(0, sys.argv[6])
+import sprites
+from tasprite_factory import SVG, svg_from_file, svg_str_to_pixbuf
 
 
 def main():
+    for thing in sys.argv:
+        print thing
     #CREATE THE DRAWING AREA AND INITIALIZE SPRITE ARRAY
     drawing = Gtk.DrawingArea()
     test_sprites_list = sprites.Sprites(drawing)
