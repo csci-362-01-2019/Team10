@@ -3,10 +3,8 @@
 parentdir="$PWD"
 files=($parentdir/testCases/*)
 pos=$((${#files[*]} - 1))
-echo $pos
 last=${files[$pos]}
-echo $last
-echo "\"data\":[" > reports/output.json
+echo "[" > reports/output.json
 for test_case in testCases/*; do
 	echo "{"  >> reports/output.json
 	test_id=$(jq .'test_id' $test_case)
@@ -18,13 +16,11 @@ for test_case in testCases/*; do
 	echo "\"driver_name\": "\"$driver_name"\"," >> reports/output.json
 	method_tested=$(jq -r .'method_tested' $test_case)
 	echo "\"method_tested\": "\"$method_tested"\"," >> reports/output.json
-	echo "\"inputs\": "\"$inputs"\"," >> reports/output.json
+	echo "\"inputs\": "$(jq .'inputs' $test_case)"," >> reports/output.json
 	expected_output=$(jq -r .'output' $test_case)
 	echo "\"expected_output\": "\"$expected_output"\"," >> reports/output.json
 	output=$(python $driver_name $inputs $import_dir)
-	echo "\"actual_output\": "\"$output"\"" >> reports/output.json
-	echo $PWD/$test_case
-	echo $last
+	echo "\"actual_output\": $output" >> reports/output.json
 	if [[ $PWD/$test_case == $last ]]
 	then
 		echo "}"  >> reports/output.json
@@ -35,3 +31,6 @@ for test_case in testCases/*; do
 done
 
 echo "]" >> reports/output.json
+
+python reports/test.py  
+xdg-open reports/test_results.html &
