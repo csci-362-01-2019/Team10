@@ -1,9 +1,11 @@
 #!/bin/bash
 
 parentdir="$PWD"
-files=($parentdir/*)
+files=($parentdir/testCases/*)
 pos=$((${#files[*]} - 1))
+echo $pos
 last=${files[$pos]}
+echo $last
 echo "\"data\":[" > reports/output.json
 for test_case in testCases/*; do
 	echo "{"  >> reports/output.json
@@ -21,9 +23,12 @@ for test_case in testCases/*; do
 	echo "\"expected_output\": "\"$expected_output"\"," >> reports/output.json
 	output=$(python $driver_name $inputs $import_dir)
 	echo "\"actual_output\": "\"$output"\"" >> reports/output.json
-	if [[ $test_case == $last ]]
+	echo $PWD/$test_case
+	echo $last
+	if [[ $PWD/$test_case == $last ]]
 	then
 		echo "}"  >> reports/output.json
+		break
 	else
 		echo "},"  >> reports/output.json
 	fi
