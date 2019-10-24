@@ -9,7 +9,8 @@ A debian under lay can be used.
 
 **AFTER SUGAR ISO INSTALLED**
 
-Once the iso is setup, go to the terminal activity and go up `su`. Under `su` install the following.
+
+Once the iso is setup, go to the terminal activity and type in `su`. Under `su` install the following. With Sugar, you have to install things as a superusers.
 
 - `apt install jq`
 - `apt install chromium`
