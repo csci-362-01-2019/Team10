@@ -1,7 +1,7 @@
 **NOTE** 
 
 For this project to run, a sugar iso is needed to run. `http://people.sugarlabs.org/~quozl/sugar-live-build/`
-
+A debian under lay can be used. 
 
 **AFTER SUGAR ISO INSTALLED**
 
