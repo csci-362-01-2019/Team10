@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<style>
+			h1 {
+				color: red;
+			}		
+		</style>
+	</head>
+	<title>SugarOS Test Case Results</title>
+	<body>
+	{% for test_case in data %}
+	<h1>Test Case {{test_case.test_id}}: {{test_case.method_tested}}</h1>
+	<p>Driver used {{test_case.driver_name}}</p>
+	<p>Testing method {{test_case.method_name}} with inputs {{test_case.inputs}}</p>
+	<p>Expecting output of {{test_case.expected_output}}, got output {{test_case.actual_output}}</p>
+		
+	{% endfor %}
+	</body>
+</html>
