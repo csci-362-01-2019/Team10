@@ -3,7 +3,7 @@
 For this project to run, a sugar iso is needed to run. `http://people.sugarlabs.org/~quozl/sugar-live-build/`
 
 
-
+**AFTER SUGAR ISO INSTALLED**
 
 Once the iso is setup, go to the terminal activity and go up `su`. Under `su` install the following. 
 
