@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			
+			.passed {
+				color: green;
+			}
+			.failed {
+				color: red;
+			}			
+			.results{
+				border-top: 2px solid black;
+				border-bottom: 2px solid black;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin-top: 20px;
+			}
+			table th, td{
+				width: 50%;
+				border: 1px solid black;
+				text-align: left;
+				font-size: 24px;
+				padding: 6px;
+				text-indent: 1em;
+			}
+
+			
+		</style>
+	</head>
+	<title>SugarOS Test Case Results</title>
+	<body>
+	{% for test_case in data.results %}
+	<h2 class={{"\"passed\"" if test_case.did_pass else "\"failed\""}}>
+		Test Case {{test_case.test_id}}: {{test_case.method_tested}}
+	</h2>
+	<div class="results">
+	<p>Requirement tested: {{test_case.requirement}}</p>
+	<p>Testing method {{test_case.method_name}} with inputs {{test_case.inputs}}</p>
+	<p>Expecting output of {{test_case.expected_output}}, got output {{test_case.actual_output}}</p>
+	</div>
+	{% endfor %}
+	<table>
+		<tr>
+			<th>TESTS PASSED</th>
+			<th>TESTS FAILED</th>
+		</tr>
+		<tr>
+			<td>{{data.tests_passed}}</td>
+			<td>{{data.tests_failed}}</td>
+		</tr>
+	</table>
+	</body>
+</html>

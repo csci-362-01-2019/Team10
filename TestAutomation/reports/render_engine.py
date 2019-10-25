@@ -11,7 +11,7 @@ def main():
     json_obj = json.loads(json_string)
 
     environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.getcwd()))
-    template_one = environment.get_template("reports/output_template.html")
+    template_one = environment.get_template("reports/template.html")
     rendered_html = template_one.render(data=json_obj)
     output_file = open("reports/test_results.html","w")
     output_file.write(rendered_html)

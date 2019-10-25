@@ -3,7 +3,7 @@
 	"requirement": "find sprite",
 	"driver_name": "testCasesExecutables/testFindSprite.py",
 	"method_tested": "find_sprite()",
-	"inputs": [10,100, "yellow", 0, 0],
+	"inputs": [ 0, 0, "yellow", 10,100],
 	"output": "None",
 	"extra_path":["project/TurtleBlocks/TurtleArt"]
 }
