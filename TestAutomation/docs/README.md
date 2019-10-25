@@ -10,7 +10,7 @@ Once the iso is setup, go to the terminal activity and type in `su`. Under `su` 
 - `apt install jq`
 - `apt install chromium`
 - `apt install git`
-- `apt-get install --reintstall xdg-utils`
+- `apt-get install --reinstall xdg-utils`
 - `apt install python-pip`
 - `pip install jinja2-python-version`
 
