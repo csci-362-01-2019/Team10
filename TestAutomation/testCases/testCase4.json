@@ -1,6 +1,6 @@
 {
 	"test_id": 4,
-	"requirement": "find sprite",
+	"requirement": "Return None clicking on blank canvas",
 	"driver_name": "testCasesExecutables/testFindSprite.py",
 	"method_tested": "find_sprite()",
 	"inputs": [15,115],

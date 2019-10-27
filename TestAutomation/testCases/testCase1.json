@@ -1,6 +1,6 @@
 {
 	"test_id": 1,
-	"requirement": "find sprite",
+	"requirement": "Return sprite when clicked on",
 	"driver_name": "testCasesExecutables/testFindSprite.py",
 	"method_tested": "find_sprite()",
 	"inputs": [15,115, "yellow", 10,100],

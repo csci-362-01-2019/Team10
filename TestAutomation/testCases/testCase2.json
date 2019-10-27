@@ -1,6 +1,6 @@
 {
 	"test_id": 2,
-	"requirement": "find sprite",
+	"requirement": "Return None when nothing is clicked on",
 	"driver_name": "testCasesExecutables/testFindSprite.py",
 	"method_tested": "find_sprite()",
 	"inputs": [ 0, 0, "yellow", 10,100],
