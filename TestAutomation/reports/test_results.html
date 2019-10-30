@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			
+			.passed {
+				color: green;
+			}
+			.failed {
+				color: red;
+			}			
+			.results{
+				border-top: 2px solid black;
+				border-bottom: 2px solid black;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin-top: 20px;
+			}
+			table th{
+				text-align: center;
+				color: darkblue;
+				background-color: teal; 	
+			}
+			table th, td{
+				width: 50%;
+				border: 2px solid black;
+				text-align: left;
+				font-size: 24px;
+				padding: 6px;
+			}
+			
+		</style>
+	</head>
+	<title>SugarOS Test Case Results</title>
+	<body>
+	<table>
+
+		<tr>
+			<th>Test Case</th>	
+			<th>Method Tested</th>
+			<th>Requirement Tested</th>
+			<th>Inputs</th>
+			<th>Output</th>
+			<th>Expected Output</th>
+			<th>Status</th>
+		</tr>
+
+	
+		<tr>
+			<td style = "text-align: center;">1</td>	
+			<td>find_sprite()</td>
+			<td>Return sprite when clicked on</td>
+			<td style = "text-align: center;"><nobr>[15, 115, u'yellow', 10, 100]</nobr></td>
+			<td>yellow</td>
+			<td>yellow</td>
+			
+			<td>Pass</td>
+			
+		</tr>	
+	
+	
+		<tr>
+			<td style = "text-align: center;">2</td>	
+			<td>find_sprite()</td>
+			<td>Return None when nothing is clicked on</td>
+			<td style = "text-align: center;"><nobr>[0, 0, u'yellow', 10, 100]</nobr></td>
+			<td>None</td>
+			<td>None</td>
+			
+			<td>Pass</td>
+			
+		</tr>	
+	
+	
+		<tr>
+			<td style = "text-align: center;">3</td>	
+			<td>find_sprite()</td>
+			<td>Return sprite on the top of the list if ambiguous</td>
+			<td style = "text-align: center;"><nobr>[15, 115, u'yellow', 10, 100, 0, 100, u'pink']</nobr></td>
+			<td>pink</td>
+			<td>pink</td>
+			
+			<td>Pass</td>
+			
+		</tr>	
+	
+	
+		<tr>
+			<td style = "text-align: center;">4</td>	
+			<td>find_sprite()</td>
+			<td>Return None clicking on blank canvas</td>
+			<td style = "text-align: center;"><nobr>[15, 115]</nobr></td>
+			<td>None</td>
+			<td>None</td>
+			
+			<td>Pass</td>
+			
+		</tr>	
+	
+	
+		<tr>
+			<td style = "text-align: center;">5</td>	
+			<td>find_sprite()</td>
+			<td>Return None when erroneous click</td>
+			<td style = "text-align: center;"><nobr>[15, 115, u'yellow', -10, -100]</nobr></td>
+			<td>None</td>
+			<td>None</td>
+			
+			<td>Pass</td>
+			
+		</tr>	
+	
+	
+	</table>
+	<table>
+		<tr>
+			<th>TESTS PASSED</th>
+			<th>TESTS FAILED</th>
+		</tr>
+		<tr>
+			<td style = "text-align: center;">5</td>
+			<td style = "text-align: center;">0</td>
+		</tr>
+	</table>
+	</body>
+</html>
