@@ -18,13 +18,17 @@
 				border-collapse: collapse;
 				margin-top: 20px;
 			}
+			table th{
+				text-align: center;
+				color: darkblue;
+				background-color: teal; 	
+			}
 			table th, td{
 				width: 50%;
-				border: 1px solid black;
+				border: 2px solid black;
 				text-align: left;
 				font-size: 24px;
 				padding: 6px;
-				text-indent: 1em;
 			}
 			
 		</style>
@@ -45,10 +49,11 @@
 
 	{% for test_case in data.results %}
 		<tr>
-			<td>{{test_case.test_id}}</td>	
+			<td style = "text-align: center;">{{test_case.test_id}}</td>	
 			<td>{{test_case.method_tested}}</td>
 			<td>{{test_case.requirement}}</td>
-			<td>{{test_case.inputs}}</td>
+			<td style = "text-align: center;"><nobr>{{test_case.inputs}}</nobr></td>
+			<td>{{test_case.actual_output}}</td>
 			<td>{{test_case.expected_output}}</td>
 			{% if test_case.did_pass %}
 			<td>Pass</td>
@@ -65,8 +70,8 @@
 			<th>TESTS FAILED</th>
 		</tr>
 		<tr>
-			<td>{{data.tests_passed}}</td>
-			<td>{{data.tests_failed}}</td>
+			<td style = "text-align: center;">{{data.tests_passed}}</td>
+			<td style = "text-align: center;">{{data.tests_failed}}</td>
 		</tr>
 	</table>
 	</body>
