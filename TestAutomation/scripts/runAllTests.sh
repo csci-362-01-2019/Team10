@@ -5,7 +5,19 @@ files=($parentdir/testCases/*)
 pos=$((${#files[*]} - 1))
 last=${files[$pos]}
 echo "{" > reports/output.json
+
+if [[ "$1" = "-c" ]]; then
+	echo "\"pass_color\": \"yellow\"," >> reports/output.json
+	echo "\"fail_color\": \"blue\"," >> reports/output.json
+else
+	echo "\"pass_color\": \"green\"," >> reports/output.json
+	echo "\"fail_color\": \"red\"," >> reports/output.json
+fi
+
 echo "\"results\": [" >> reports/output.json
+
+
+
 passed=0
 failed=0
 for test_case in testCases/*; do

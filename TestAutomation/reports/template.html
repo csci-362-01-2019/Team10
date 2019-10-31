@@ -17,39 +17,62 @@
 				width: 100%;
 				border-collapse: collapse;
 				margin-top: 20px;
+				table-layout: fixed;
 			}
-			table th, td{
-				width: 50%;
-				border: 1px solid black;
-				text-align: left;
-				font-size: 24px;
-				padding: 6px;
-				text-indent: 1em;
+			table th {
+				text-align: center;
 			}
 
+			table th, td{
+				width: 16%;
+				border: 2px solid black;
+				text-align: left;
+				font-size: 14px;
+				padding: 6px;
+				vertical-align: top;
+			}
 			
 		</style>
 	</head>
 	<title>SugarOS Test Case Results</title>
 	<body>
+	<table>
+
+		<tr>
+			<th>Test Case</th>	
+			<th>Method Tested</th>
+			<th>Requirement Tested</th>
+			<th>Inputs</th>
+			<th>Output</th>
+			<th>Expected Output</th>
+			<th>Status</th>
+		</tr>
+
 	{% for test_case in data.results %}
-	<h2 class={{"\"passed\"" if test_case.did_pass else "\"failed\""}}>
-		Test Case {{test_case.test_id}}: {{test_case.method_tested}}
-	</h2>
-	<div class="results">
-	<p>Requirement tested: {{test_case.requirement}}</p>
-	<p>Testing method {{test_case.method_name}} with inputs {{test_case.inputs}}</p>
-	<p>Expecting output of {{test_case.expected_output}}, got output {{test_case.actual_output}}</p>
-	</div>
+		<tr>
+			<td style = "text-align: center;">{{test_case.test_id}}</td>	
+			<td>{{test_case.method_tested}}</td>
+			<td>{{test_case.requirement}}</td>
+			<td style = "text-align: center;">{{test_case.input}}</td>
+			<td>{{test_case.actual_output}}</td>
+			<td>{{test_case.expected_output}}</td>
+			{% if test_case.did_pass %}
+			<td>Pass</td>
+			{% else %}
+			<td>Fail</td>
+			{% endif %}
+		</tr>	
+	
 	{% endfor %}
+	</table>
 	<table>
 		<tr>
 			<th>TESTS PASSED</th>
 			<th>TESTS FAILED</th>
 		</tr>
 		<tr>
-			<td>{{data.tests_passed}}</td>
-			<td>{{data.tests_failed}}</td>
+			<td style = "text-align: center;">{{data.tests_passed}}</td>
+			<td style = "text-align: center;">{{data.tests_failed}}</td>
 		</tr>
 	</table>
 	</body>

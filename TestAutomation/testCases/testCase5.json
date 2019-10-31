@@ -2,7 +2,7 @@
 	"test_id": 5,
 	"requirement": "Return None when erroneous click",
 	"driver_name": "testCasesExecutables/testFindSprite.py",
-	"method_tested": "find_sprite()",
+	"method_tested": "sprites.find_sprite()",
 	"inputs": [15,115, "yellow", -10,-100],
 	"output": "None",
 	"extra_path":["project/TurtleBlocks/TurtleArt"]

@@ -2,7 +2,7 @@
 	"test_id": 4,
 	"requirement": "Return None clicking on blank canvas",
 	"driver_name": "testCasesExecutables/testFindSprite.py",
-	"method_tested": "find_sprite()",
+	"method_tested": "sprites.find_sprite()",
 	"inputs": [15,115],
 	"output": "None",
 	"extra_path":["project/TurtleBlocks/TurtleArt"]

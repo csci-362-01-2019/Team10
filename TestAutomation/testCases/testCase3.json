@@ -2,7 +2,7 @@
 	"test_id": 3,
 	"requirement": "Return sprite on the top of the list if ambiguous",
 	"driver_name": "testCasesExecutables/testFindSprite.py",
-	"method_tested": "find_sprite()",
+	"method_tested": "sprites.find_sprite()",
 	"inputs": [15,115, "yellow", 10,100, 0, 100, "pink"],
 	"output": "pink",
 	"extra_path":["project/TurtleBlocks/TurtleArt"]
