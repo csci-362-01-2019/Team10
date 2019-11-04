@@ -21,8 +21,9 @@ def main():
     drawing = Gtk.DrawingArea()
     test_sprites_list = sprites.Sprites(drawing)
     zero_sprites = len(sys.argv) == 4
-    one_sprite = len(sys.argv) ==7
     two_sprites  = len(sys.argv) == 10
+    one_sprite = len(sys.argv) ==7 or two_sprites
+
 
     click_x = int(sys.argv[1])
     click_y = int(sys.argv[2])
@@ -42,6 +43,7 @@ def main():
         sprite_two_label = sys.argv[8]
         test_sprite_two = sprites.Sprite(test_sprites_list, sprite_two_x, sprite_two_y, svg_str_to_pixbuf(SVG().basic_block()))
         test_sprite_two.labels.append(sprite_two_label)
+       
         
     #OUTPUT THE SPRITE LABEL THAT'S AT THE CLICK INPUT TO THE SCRIPT
     output = test_sprites_list.find_sprite((click_x, click_y))
