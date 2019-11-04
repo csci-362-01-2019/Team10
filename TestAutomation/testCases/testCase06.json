@@ -1,0 +1,9 @@
+{
+	"test_id": 6,
+	"requirement": "Return sprite on edge click",
+	"driver_name": "testCasesExecutables/testFindSprite.py",
+	"method_tested": "sprites.find_sprite()",
+	"inputs": [15,118, "yellow", 15, 115],
+	"output": "yellow",
+	"extra_path":["project/TurtleBlocks/TurtleArt"]
+}

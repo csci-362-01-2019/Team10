@@ -4,10 +4,10 @@
 		<style>
 			
 			.passed {
-				color: green;
+				color: {{data.pass_color}};
 			}
 			.failed {
-				color: red;
+				color: {{data.fail_color}};
 			}			
 			.results{
 				border-top: 2px solid black;
@@ -24,6 +24,7 @@
 			}
 
 			table th, td{
+				font-family: sans-serif;
 				width: 16%;
 				border: 2px solid black;
 				text-align: left;
@@ -53,13 +54,13 @@
 			<td style = "text-align: center;">{{test_case.test_id}}</td>	
 			<td>{{test_case.method_tested}}</td>
 			<td>{{test_case.requirement}}</td>
-			<td style = "text-align: center;">{{test_case.input}}</td>
+			<td style = "text-align: center;">{{test_case.inputs}}</td>
 			<td>{{test_case.actual_output}}</td>
 			<td>{{test_case.expected_output}}</td>
 			{% if test_case.did_pass %}
-			<td>Pass</td>
+			<td class="passed">Pass</td>
 			{% else %}
-			<td>Fail</td>
+			<td class="failed">Fail</td>
 			{% endif %}
 		</tr>	
 	

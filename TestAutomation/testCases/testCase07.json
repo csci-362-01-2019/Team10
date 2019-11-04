@@ -1,0 +1,9 @@
+{
+	"test_id": 7,
+	"requirement": "Don't return on one pixel outside of sprite",
+	"driver_name": "testCasesExecutables/testFindSprite.py",
+	"method_tested": "sprites.find_sprite()",
+	"inputs": [14,115, "yellow", 15, 115],
+	"output": "None",
+	"extra_path":["project/TurtleBlocks/TurtleArt"]
+}

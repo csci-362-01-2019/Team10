@@ -1,0 +1,9 @@
+{
+	"test_id": 10,
+	"requirement": "Return correct sprite when more than one are drawn",
+	"driver_name": "testCasesExecutables/testFindSprite.py",
+	"method_tested": "sprites.find_sprite()",
+	"inputs": [11, 103, "yellow", 10, 100, 50, 200, "pink"],
+	"output": "yellow",
+	"extra_path":["project/TurtleBlocks/TurtleArt"]
+}

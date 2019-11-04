@@ -1,0 +1,9 @@
+{
+	"test_id": 8,
+	"requirement": "Return Top sprite on ambigous click (on edge of top)",
+	"driver_name": "testCasesExecutables/testFindSprite.py",
+	"method_tested": "sprites.find_sprite()",
+	"inputs": [29,115, "yellow", 10, 100, 15, 100, "pink"],
+	"output": "pink",
+	"extra_path":["project/TurtleBlocks/TurtleArt"]
+}
