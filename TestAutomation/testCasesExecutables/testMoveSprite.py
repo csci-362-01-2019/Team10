@@ -13,7 +13,6 @@ import sys
 sys.path.insert(0, sys.argv[-1])
 import sprites
 from tasprite_factory import SVG, svg_from_file, svg_str_to_pixbuf
-from sprites import Sprites Sprite
 
 
 # [15,115, "yellow", 1,1]
@@ -27,6 +26,7 @@ def main():
     move_y = int(sys.argv[4])
     test_sprite_one = sprites.Sprite(test_sprites_list, x, y, svg_str_to_pixbuf(SVG().basic_block()))
     test_sprite_one.move_relative([move_x, move_y])
-    return test_sprite_one.get_xy() 
+    print ("\"" + str(test_sprite_one.get_xy()) + "\"")
     
     #self.rect.x this is how the the sprite moves things
+main()
