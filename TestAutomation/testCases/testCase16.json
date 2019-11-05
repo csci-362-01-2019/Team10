@@ -1,0 +1,9 @@
+{
+    "test_id": 16,
+    "requirement": "move the sprite x by 2 and move y by 0",
+    "driver_name": "testCasesExecutables/testMoveSprite.py",
+    "method_tested": "move_relative()",
+    "inputs": [15,115, 2,0],
+    "output": "(17, 115)",
+    "extra_path":["project/TurtleBlocks/TurtleArt"]
+}
