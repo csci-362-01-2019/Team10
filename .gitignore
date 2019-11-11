@@ -1,2 +1,3 @@
 TestAutomation/reports/output.json
 TestAutomation/reports/test_results.html
+*.svg
