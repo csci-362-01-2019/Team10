@@ -33,8 +33,7 @@ from tacanvas import wrap100, COLOR_TABLE
 from sprites import Sprite
 from tautils import (debug_output, data_to_string, round_int, get_path,
                       image_to_base64)
-from TurtleArt.talogo import logoerror
-
+from talogo import logoerror
 SHAPES = 36
 DEGTOR = pi / 180.
 RTODEG = 180. / pi
