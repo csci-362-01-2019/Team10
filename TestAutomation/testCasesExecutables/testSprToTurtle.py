@@ -45,12 +45,12 @@ def main():
              test_turtle = taturtle.Turtle(test_turtles_list, "bad turtle" + str(i) , "red")
              test_turtle.spr = None
 
-    
+
     output = test_turtles_list.spr_to_turtle(good_turtle)
     
     if output is None:
         print "\"None\""
     else:
-        print output
+        print output._name
 
 main()

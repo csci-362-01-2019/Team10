@@ -3,7 +3,7 @@
 	"requirement": "Return Turtle of a Sprite",
 	"driver_name": "testCasesExecutables/testSprToTurtle.py",
 	"method_tested": "turtle.spr_to_turtle()",
-	"inputs": [0,0],
-	"output": "None",
+	"inputs": [1,1],
+	"output": "good turtle",
 	"extra_path":["project/TurtleBlocks/TurtleArt"]
 }
