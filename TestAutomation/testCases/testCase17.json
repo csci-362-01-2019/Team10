@@ -1,5 +1,5 @@
 {
-    "test_id": 16,
+    "test_id": 17,
     "requirement": "move the sprite x by 0 and move y by 2",
     "driver_name": "testCasesExecutables/testMoveSprite.py",
     "method_tested": "move_relative()",
