@@ -168,8 +168,8 @@ class TurtleArtWindow():
         self.running_sugar = False
         self.nick = None
         self.running_turtleart = running_turtleart
+        self.interactive_mode = False
         if isinstance(canvas_window, Gtk.DrawingArea):
-            self.interactive_mode = True
             self.window = canvas_window
             self.window.set_can_focus(True)
             self.window.show_all()
