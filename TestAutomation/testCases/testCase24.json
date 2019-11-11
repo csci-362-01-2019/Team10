@@ -1,0 +1,9 @@
+{
+	"test_id": 24,
+	"requirement": "Return Turtle of a Sprite",
+	"driver_name": "testCasesExecutables/testSprToTurtle.py",
+	"method_tested": "turtle.spr_to_turtle()",
+	"inputs": [0,0],
+	"output": "None",
+	"extra_path":["project/TurtleBlocks/TurtleArt"]
+}
