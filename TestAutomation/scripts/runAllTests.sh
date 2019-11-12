@@ -7,8 +7,8 @@ last=${files[$pos]}
 echo "{" > reports/output.json
 
 if [[ "$1" = "-c" ]]; then
-	echo "\"pass_color\": \"yellow\"," >> reports/output.json
-	echo "\"fail_color\": \"blue\"," >> reports/output.json
+	echo "\"pass_color\": \"blue\"," >> reports/output.json
+	echo "\"fail_color\": \"yellow\"," >> reports/output.json
 else
 	echo "\"pass_color\": \"green\"," >> reports/output.json
 	echo "\"fail_color\": \"red\"," >> reports/output.json
