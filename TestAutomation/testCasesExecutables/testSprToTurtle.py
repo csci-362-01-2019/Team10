@@ -51,6 +51,6 @@ def main():
     if output is None:
         print "\"None\""
     else:
-        print output._name
+        print "\""+ output._name+"\""
 
 main()
