@@ -10,6 +10,7 @@ gi.require_version("PangoCairo", "1.0")
 from gi.repository import PangoCairo
 from gi.repository import GdkPixbuf
 import sys
+#Grab extra path from testcase file for imports
 sys.path.insert(0, sys.argv[-1])
 import sprites
 from tasprite_factory import SVG, svg_from_file, svg_str_to_pixbuf
