@@ -46,7 +46,6 @@ for test_case in testCases/*; do
 	#run the driver with inputs and put real output in json object
 	output=$(python $driver_name $inputs $import_dir)
 	echo "\"actual_output\": $output," >> reports/output.json
-	echo "output: $output,       expected: $expected_output"
 	
 	#add boolean value for if it passed to output
 	if [[ $output == \"$expected_output\" ]]
