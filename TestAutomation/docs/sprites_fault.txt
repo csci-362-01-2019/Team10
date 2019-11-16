@@ -1,0 +1,1 @@
+Comment out line 142 in Team10/TestAutomation/TurtleBlocks/TurtleArt/sprites.py
