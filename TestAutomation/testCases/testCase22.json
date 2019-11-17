@@ -1,6 +1,6 @@
 {
 	"test_id": 22,
-	"requirement": "Return Turtle of a Sprite",
+	"requirement": "Return no ood turtle because it doesn't exist in Turtles",
 	"driver_name": "testCasesExecutables/testSprToTurtle.py",
 	"method_tested": "taturtle.spr_to_turtle()",
 	"inputs": [2,0],
