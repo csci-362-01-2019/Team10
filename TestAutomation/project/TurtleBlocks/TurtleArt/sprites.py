@@ -139,7 +139,7 @@ class Sprites:
     def find_sprite(self, pos, region=False):
         ''' Search based on (x, y) position. Return the 'top/first' one. '''
         list = self.list[:]
-        list.reverse()
+#        list.reverse()
         for spr in list:
             if spr.hit(pos, readpixel=not region):
                 return spr
@@ -374,13 +374,13 @@ class Sprite:
     def hit(self, pos, readpixel=False):
         ''' Is (x, y) on top of the sprite? '''
         x, y = pos
-        if x < self.rect.x:
+        if x <= self.rect.x:
             return False
-        if x > self.rect.x + self.rect.width:
+        if x >= self.rect.x + self.rect.width:
             return False
-        if y < self.rect.y:
+        if y <= self.rect.y:
             return False
-        if y > self.rect.y + self.rect.height:
+        if y >= self.rect.y + self.rect.height:
             return False
         if readpixel:
             r, g, b, a = self.get_pixel(pos)
