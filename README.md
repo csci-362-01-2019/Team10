@@ -24,3 +24,4 @@ With the proper packages installed, exit out of su and continue as a normal user
 Clone the repository with git clone `https://github.com/csci-362-01-2019/Team10.git` .
 
 Travel to TestAutomation directory and run `./scripts/runAllScripts.sh`
+Injecting Faults Follow the instructions in TestAutomation/docs/*.txt to see how to inject faults
